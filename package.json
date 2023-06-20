@@ -11,7 +11,7 @@
     "todolist",
     "todo"
   ],
-  "author": "Thai  Bao",
+  "author": "Thai Quang Bao",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
