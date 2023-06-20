@@ -1,9 +1,9 @@
 const express = require('express')
 const app = express()
-const route = require('./routes')
+const route = require('./node/src/routes')
 const port = 3000;
 const morgan = require('morgan')
-const db = require ('./config/db')
+const db = require ('./node/src/config/db')
 const cors = require('cors')
 app.use(morgan('combined'))
 app.use(cors([{
