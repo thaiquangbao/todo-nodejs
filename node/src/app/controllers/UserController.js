@@ -17,9 +17,9 @@ class UserController{
      }
      insert(req,res,next){
         const formData = req.body;
-        const user =  new User(formData);
+        const user =  new Users(formData);
         user.save()
-        .then(() => res.redirect('https://todo-reactjs-six.vercel.app/'))
+        .then(() => res.redirect('https://todo-reactjs-rho.vercel.app/'))
         .catch(next)
      }
      update(req,res,next){
