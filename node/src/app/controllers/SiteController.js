@@ -18,18 +18,18 @@ class SiteController{
         const date = new Date()
         
         task.save()
-        .then(() => res.redirect('http://localhost:3001/home'))
+        .then(() => res.redirect('https://todo-reactjs-rho.vercel.app/home'))
         .catch(next)
     }
     update(req,res,next){
         Task.updateOne({_id: req.body._id},req.body)
-            .then(()=>res.redirect('http://localhost:3001/home'))
+            .then(()=>res.redirect('https://todo-reactjs-rho.vercel.app/home'))
             .catch(next);
         
     }
     delete(req,res,next){
         Task.deleteOne({_id: req.body._id})
-            .then(() => res.redirect('http://localhost:3001/home'))
+            .then(() => res.redirect('https://todo-reactjs-rho.vercel.app/home'))
             .catch(next)
     }
 
