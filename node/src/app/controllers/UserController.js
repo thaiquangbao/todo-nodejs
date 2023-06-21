@@ -1,15 +1,15 @@
-const User = require('../models/users')
+const Users = require('../models/users')
 
 class UserController{
     show(req,res,next){
-        User.find({})
-        .then(user =>{
-            res.json(user)
+        Users.find({})
+        .then(users =>{
+            res.json(users)
         })
         .catch(next)
     }
     index(req,res,next){
-        User.findOne({userName: req.query.username,passWord:req.query.password})
+        Users.findOne({userName: req.query.username,passWord:req.query.password})
          .then(user =>{
              res.json(user)
          })
@@ -23,12 +23,12 @@ class UserController{
         .catch(next)
      }
      update(req,res,next){
-        User.updateOne({_id: req.params._id},req.body)
+        Users.updateOne({_id: req.params._id},req.body)
             .then(()=> res.redirect('/users'))
             .catch(next)
      }
      delete(req,res,next){
-        User.deleteOne({_id:req.params._id})
+        Users.deleteOne({_id:req.params._id})
             .then(()=>res.redirect('/users'))
             .catch(next)
      }
