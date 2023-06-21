@@ -4,7 +4,7 @@ const siteController = require('../app/controllers/SiteController')
 useRouter.post('/delete',siteController.delete);
 useRouter.post('/update',siteController.update)
 useRouter.post('/insert',siteController.insert);
-useRouter.get('/api',siteController.show);
-useRouter.get('/',siteController.tasks) ;
+useRouter.get('/api',siteController.tasks);
+useRouter.get('/',siteController.show) ;
 
 module.exports = useRouter;
